@@ -926,7 +926,7 @@
             "description": "Not Found"
           }
         },
-        "deprecated": false,
+        "deprecated": true,
         "security": [
           {
             "Authorization": []
@@ -939,7 +939,7 @@
         "tags": [
           "Vehicle Transfer Orders"
         ],
-        "summary": "Get gate passes",
+        "summary": "Get all gate passes",
         "operationId": "getGatePassesUsingGET",
         "produces": [
           "application/json"
@@ -1038,7 +1038,7 @@
         "tags": [
           "Vehicle Transfer Orders"
         ],
-        "summary": "Retrieve a gate pass",
+        "summary": "Retrieve a single gate pass",
         "operationId": "getGatePassUsingGET",
         "produces": [
           "application/json"
@@ -1104,69 +1104,60 @@
               "$ref": "#/definitions/OrderQuoteRequest"
             },
             "x-examples": {
-              "application/json": {
+              "1": {
                 "type": "BASIC",
                 "vehicleTransferOrders": [
                   {
                     "directions": {
-                      "pickup": {
-                        "name": "Rob's Lot",
-                        "address": "4323 N 78th St, Scottsdale, AZ 85251, USA",
-                        "geolocation": {
-                          "coordinates": [
-                            -111.911547,
-                            33.4993709
-                          ]
-                        },
-                        "type": "business"
-                      },
                       "dropoff": {
-                        "name": "Jerry's House",
-                        "address": "4230 E Sells Dr, Phoenix, AZ 85018, USA",
+                        "address": "string",
                         "geolocation": {
                           "coordinates": [
-                            -111.9897083,
-                            33.5017089
-                          ]
+                            0
+                          ],
+                          "type": "string"
                         },
-                        "type": "personal"
+                        "type": "string"
+                      },
+                      "pickup": {
+                        "address": "string",
+                        "geolocation": {
+                          "coordinates": [
+                            0
+                          ],
+                          "type": "string"
+                        },
+                        "type": "string"
                       }
                     },
                     "vehicle": {
-                      "vin": "KL4CJCSBXEB690968"
-                    }
-                  },
-                  {
-                    "directions": {
-                      "pickup": {
-                        "name": "Rob's Lot",
-                        "address": "4323 N 78th St, Scottsdale, AZ 85251, USA",
-                        "geolocation": {
-                          "coordinates": [
-                            -111.911547,
-                            33.4993709
-                          ]
-                        },
-                        "type": "business"
+                      "color": "Blue",
+                      "isOperational": true,
+                      "isOverSized": false,
+                      "make": "BMW",
+                      "model": "M3",
+                      "notes": "She's a beauty.",
+                      "odometer": 10000,
+                      "stockNumber": "1234",
+                      "truckSpecifications": {
+                        "rearAxle": "string"
                       },
-                      "dropoff": {
-                        "name": "Jerry's House",
-                        "address": "4230 E Sells Dr, Phoenix, AZ 85018, USA",
-                        "geolocation": {
-                          "coordinates": [
-                            -111.9897083,
-                            33.5017089
-                          ]
-                        },
-                        "type": "personal"
-                      }
-                    },
-                    "vehicle": {
-                      "vin": "JTJHY7AX8B4079281"
+                      "type": "string",
+                      "vehicleMarket": "LIGHT",
+                      "vehicleMeasurements": {
+                        "curbWeight": 0,
+                        "grossVehicleWeightRating": 0,
+                        "height": 0,
+                        "length": 0,
+                        "width": 0
+                      },
+                      "vin": "2C3KA53G68H269241",
+                      "year": 2015
                     }
                   }
                 ]
-              }
+              },
+              "Minimal": "// Minimal information required for quote request.  Fare name optional. {     \"type\": \"BASIC\",     \"fare\": {         \"name\": \"Gold\"     },     \"vehicleTransferOrders\": [         {             \"directions\": {                 \"pickup\": {                     \"address\": \"2401 S 15th Ave, Phoenix, AZ 85007, USA\"                 },                 \"dropoff\": {                     \"address\": \"154 Chester Drive, Yonkers, NY 10710, USA\"                     }             },             \"vehicle\": {                 \"vin\": \"1J4GW58SXXC527112\",                 \"isOperational\": true             }         }     ] }"
             }
           }
         ],

@@ -1,19 +1,8 @@
----
-stoplight-id: misvonsl6wjxs
----
-
 # Pulling Inspection Photos Via API
 
-​1. Use the full request to get the pickup and dropoff ids.
+## 1. ​Use the full request to get the pickup and dropoff ids
 
-[API Docs reference](https://docs.runbuggy.com/docs/shipping-api/e37c8f68eee73-retrieve-an-expanded-order)​
-
-```raw
-curl 'https://ng-staging.runbuggy.com/staging/api/orders/{id}/full' \
--X 'GET' \
--H 'Accept: application/json, text/plain, */*' \
--H 'Authorization: TOKEN GOES HERE' \
-```
+[Retrieve an Expanded Order](https://docs.runbuggy.com/docs/shipping-api/e37c8f68eee73-retrieve-an-expanded-order)​
 
 In the response you will need the _VTO id_, _pickup id_ and the _dropoff id_. see below examples
 
@@ -47,38 +36,11 @@ In the response you will need the _VTO id_, _pickup id_ and the _dropoff id_. se
 
 Each resource has an id. This is what is needed to pull the images. See examples below:
 
-### Pick up address
-
 ```raw
 curl 'https://ng-staging.runbuggy.com/staging/api/vehicle-transfer-orders/{{VTO ID}}/inspections/{{INSPECTION ID}}' \
 -X 'GET' \
 -H 'Accept: application/json, text/plain, */*' \
--H 'Pragma: no-cache' \
 -H 'Authorization: TOKEN HERE' \
--H 'Referer: https://apps.runbuggy.com/runbuggy/spa-v2/' \
--H 'Cache-Control: no-cache' \
--H 'Host: apps.runbuggy.com' \
--H 'Accept-Language: en-GB,en;q=0.9' \
--H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.5 Safari/605.1.15' \
--H 'Accept-Encoding: gzip, deflate, br' \
--H 'Connection: keep-alive'
-```
-
-### Dropoff address
-
-```raw
-curl 'https://ng-staging.runbuggy.com/staging/api/vehicle-transfer-orders/{{VTO ID}}/inspections/{{INSPECTION ID}}' \
--X 'GET' \
--H 'Accept: application/json, text/plain, */*' \
--H 'Pragma: no-cache' \
--H 'Authorization: TOKEN HERE' \
--H 'Referer: https://apps.runbuggy.com/runbuggy/spa-v2/' \
--H 'Cache-Control: no-cache' \
--H 'Host: apps.runbuggy.com' \
--H 'Accept-Language: en-GB,en;q=0.9' \
--H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.5 Safari/605.1.15' \
--H 'Accept-Encoding: gzip, deflate, br' \
--H 'Connection: keep-alive'
 ```
 
 With each response the the image id is located in the _inspectionPoints_ array in the json response . example of image id in json response
@@ -99,14 +61,5 @@ With each response the the image id is located in the _inspectionPoints_ array i
 ```raw
 curl 'https://ng-staging.runbuggy.com/staging/api/vehicle-transfer-orders/{{VTO ID}}/photos/{{IMAGE ID}}/hd' \
 -X 'GET' \
--H 'Accept: */*' \
--H 'Pragma: no-cache' \
 -H 'Authorization: TOKEN HERE' \
--H 'Referer: https://apps.runbuggy.com/runbuggy/spa-v2/' \
--H 'Cache-Control: no-cache' \
--H 'Host: apps.runbuggy.com' \
--H 'Accept-Language: en-GB,en;q=0.9' \
--H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.5 Safari/605.1.15' \
--H 'Accept-Encoding: gzip, deflate, br' \
--H 'Connection: keep-alive'
 ```

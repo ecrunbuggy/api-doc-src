@@ -1157,7 +1157,7 @@
                   }
                 ]
               },
-              "Minimal": "// Minimal information required for quote request.  Fare name optional. {     \"type\": \"BASIC\",     \"fare\": {         \"name\": \"Gold\"     },     \"vehicleTransferOrders\": [         {             \"directions\": {                 \"pickup\": {                     \"address\": \"2401 S 15th Ave, Phoenix, AZ 85007, USA\"                 },                 \"dropoff\": {                     \"address\": \"154 Chester Drive, Yonkers, NY 10710, USA\"                     }             },             \"vehicle\": {                 \"vin\": \"1J4GW58SXXC527112\",                 \"isOperational\": true             }         }     ] }"
+              "Minimal": "{     \"type\": \"BASIC\",     \"fare\": {         \"name\": \"Gold\"     },     \"vehicleTransferOrders\": [         {             \"directions\": {                 \"pickup\": {                     \"address\": \"2401 S 15th Ave, Phoenix, AZ 85007, USA\"                 },                 \"dropoff\": {                     \"address\": \"154 Chester Drive, Yonkers, NY 10710, USA\"                     }             },             \"vehicle\": {                 \"vin\": \"1J4GW58SXXC527112\",                 \"isOperational\": true             }         }     ] }"
             }
           }
         ],

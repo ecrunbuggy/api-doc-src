@@ -1,0 +1,2 @@
+import ruleset from "https://stoplight.io/api/v1/projects/cHJqOjExNjcyOQ/spectral.js?branch_slug=katie-labranche-modified-3-files&token=41bcaa33-77ac-4405-8b50-bbe9fa9aafd6";
+export default { extends: ruleset };

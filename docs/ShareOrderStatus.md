@@ -1,11 +1,10 @@
 # Share Order Status with 3rd parties
 
-The flow consists of 4 main steps:
-## 1) [Authenticate](https://runbuggy.stoplight.io/docs/shipping-api/b3A6NDE4MzU1MTM-retrieve-token)
+The flow consists of 3 main steps:
 
-## 2) [Create an Order](https://runbuggy.stoplight.io/docs/shipping-api/b3A6NDE4MzU1MTY-create-an-order)
+## 1) [Create an Order](https://runbuggy.stoplight.io/docs/shipping-api/b3A6NDE4MzU1MTY-create-an-order)
 
-## 3) Receive JWT token
+## 2) Receive JWT token
 This token is used to share Status with Buyer / Seller
 
 ```bash
@@ -25,7 +24,7 @@ curl --location --request POST 'https://ng.runbuggy.com/testng/api/oauth2/token'
 }
 ```
 
-## 4) Open Order Status in IFrame
+## 3) Open Order Status in IFrame
 
 The IFrame URL is constructed out of 4 query parameters:
 

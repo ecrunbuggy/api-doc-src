@@ -1,4 +1,4 @@
-# Share Order Status with 3rd parties
+# Embedding iFrame Order Status
 
 The flow consists of 3 main steps:
 

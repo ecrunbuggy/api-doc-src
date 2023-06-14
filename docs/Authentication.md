@@ -1,6 +1,6 @@
 # Authentication
 
-[Authenticate](/docs/shipping-api/b3A6NDE4MzU1MTM-retrieve-token) to retrieve a Bearer token.
+Contact your RunBuggy Representative to retrieve a Bearer token.
 
 Add to HTTP header e.g. `Authorization: Bearer e8ujql7desph6bm4ajf6pop96mhevi39`
 

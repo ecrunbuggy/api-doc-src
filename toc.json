@@ -66,7 +66,7 @@
     },
     {
       "type": "item",
-      "title": "Share Order Status with 3rd parties",
+      "title": "Embedding iFrame Order Status",
       "uri": "/docs/ShareOrderStatus.md"
     },
     {
